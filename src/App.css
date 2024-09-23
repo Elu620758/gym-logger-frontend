@@ -1,0 +1,561 @@
+:root {
+  --main-color: #b3f12c;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* --------------------------------- 1. home page--------------------------------- */
+
+.homepage {
+  background-image: url("./images/run.jpg");
+  background-size: cover;
+  background-position: right center;
+  /* Adjust the background position */
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Adjust the .home class to move content to the right end */
+.home {
+  position: absolute;
+  bottom: 0%;
+  right: 0;
+  /* Adjust the 'right' property to move the content to the right side */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: whitesmoke;
+  text-align: right;
+  /* Set text alignment to right */
+}
+
+.home-item {
+  margin-bottom: 10px;
+}
+
+.home-title {
+  font-weight: 900;
+  font-size: 46px;
+}
+
+.home-text {
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.home-btn {
+  width: auto;
+  padding: 12px 16px;
+  font-size: 16px;
+  background-color: #c5ef2e;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  /* Add margin to the top to separate from other elements */
+}
+
+
+.head-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(205, 247, 137);
+  /* You can adjust the color to your preference */
+  text-align: justify;
+  margin-bottom: 2px;
+  letter-spacing: 2px;
+  /* Add letter spacing for a bold look */
+  display: flex;
+  /* Use flexbox */
+  align-items: self-end;
+  /* Center vertically within the container */
+  justify-content: first baseline;
+  /* Move to the left within the container */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-title,
+.home-text {
+  margin-bottom: 10px;
+  /* Add margin to create separation between rows */
+
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  width: 100%;
+  /* Ensure each element takes up the full width */
+  display: block;
+  /* Make them block-level elements */
+  margin: 10px auto;
+  /* Center them vertically and horizontally */
+}
+
+.home-title {
+  animation-delay: 0.5s;
+  /* Delay for the home title */
+}
+
+.home-text {
+  animation-delay: 1s;
+  /* Delay for the home text */
+}
+
+.home-btn {
+  animation-delay: 1.5s;
+  /* Delay for the home button */
+}
+
+
+/* ------------------------------- 2. aerobic,cardio and resistance form page--------------------------------*/
+.exercise-form-icon {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.allexcercise-page {
+  height: 100vh;
+  background-image: url('./images/all.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional - this will make the background image fixed while scrolling */
+  /* You can add additional styles as needed */
+}
+
+
+/* Add this rule to style all text elements within the component */
+/* .single-aerobic *,
+.single-cardio *,
+.single-resistance * {
+  color: white;
+} */
+
+.aerobic,
+.single-aerobic {
+  background-image: url("./images/background7.jpg");
+  background-size: 100% auto;
+  /* Increase the width by adjusting the percentage */
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+}
+
+.cardio,
+.single-cardio {
+  background-image: url("./images/background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+}
+
+
+.resistance,
+.single-resistance {
+  background-image: url("./images/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+}
+
+.aerobic-form,
+.cardio-form,
+.resistance-form,
+.aerobic-div,
+.cardio-div,
+.resistance-div {
+
+  border-radius: 10px;
+  padding: 20px;
+  width: 290px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.aerobic-form label,
+.cardio-form label,
+.resistance-form label {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.aerobic-form input,
+.cardio-form input,
+.resistance-form input {
+  margin-bottom: 10px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+  color: white;
+  width: 100%;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.message {
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.aerobic-form input::placeholder,
+.cardio-form input::placeholder,
+.resistance-form input::placeholder {
+  color: white;
+  /* Change the color to your desired placeholder color */
+}
+
+/* ---------------------------------3.single exercise page--------------------------------- */
+.aerobic-div,
+.cardio-div,
+.resistance-div {
+  width: 280px;
+}
+
+/* Set the text color to white for saved data information */
+.aerobic-div p,
+.cardio-div p,
+.resistance-div p {
+  color: white;
+}
+
+
+.single-exercise span {
+  color: var(--main-color);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.delete-btn {
+  border: none;
+  border-radius: 6px;
+  background-color: red;
+  color: whitesmoke;
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 10px auto;
+}
+
+.delete-btn:hover {
+  background-color: rgb(211, 5, 5);
+}
+
+.edit-btn {
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(23, 198, 238);
+  color: whitesmoke;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 10px auto;
+}
+
+.edit-btn:hover {
+  background-color: rgb(5, 153, 211);
+}
+
+.react-confirm-alert-overlay {
+  /* background-color: rgba(255, 255, 255, 0); */
+  background-color: white;
+}
+
+.react-confirm-alert-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 260px;
+  padding: 20px 10px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.react-confirm-alert-body h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.react-confirm-alert-button-group button {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.react-confirm-alert-button-group button:last-child {
+  background-color: red;
+}
+
+/* --------------------------------- 4.exercise page---------------------------------   */
+.exercise-icon {
+  height: 40px;
+}
+
+.aerobic-btn,
+.cardio-btn,
+.resistance-btn {
+  width: 160px;
+  height: 160px;
+  margin: 20px auto;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  box-shadow: rgba(70, 214, 230, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 150ms ease-in-out;
+}
+
+.cardio-btn {
+  background-color: #a8e328;
+  color: white;
+}
+
+.resistance-btn {
+  background-color: #d884f2;
+  /* Change this to your desired color */
+  color: white;
+  /* Text color for the button */
+}
+
+.aerobic-btn {
+  background-color: #2eaae8;
+  color: black;
+}
+
+/* ...........................5. custom Navbar........................................... */
+/* Custom Navbar styles */
+.custom-navbar {
+  background-color: rgba(107, 152, 250, 0.5);
+}
+
+/* Custom Navbar link styles */
+.custom-navbar .nav-link {
+  color: #FFFFFF;
+  /* Change this to your desired text color */
+  font-weight: bold;
+}
+
+/* Custom Navbar link styles on hover */
+.custom-navbar .nav-link:hover {
+  color: #33FF57;
+  /* Change this to your desired hover text color */
+}
+
+.custom-nav-links {
+  margin-left: auto;
+}
+
+
+
+/* --------------------------------- 6. history page---------------------------------   */
+.title {
+  margin: 30px auto 20px auto;
+  font-weight: 900;
+}
+
+.title:after {
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 35px;
+  /* length of border */
+  padding-top: 3px;
+  /* This creates some space between the element and the border. */
+  border-bottom: 2px solid;
+  /* This creates the border. Replace black with whatever color you want. */
+}
+
+.history-text {
+  margin: 20px auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.history-data {
+  margin-bottom: 20px;
+}
+
+.history-div {
+  margin: 15px auto;
+}
+
+.date {
+  min-width: 70px;
+  margin-right: 16px;
+  font-weight: bold;
+}
+
+.history-card {
+  width: 240px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  transform: rotateY(15deg);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.history-card:hover {
+  transform: rotateY(0deg);
+}
+
+.history-icon {
+  height: 35px;
+  margin-right: 14px;
+}
+
+.aerobic-title,
+.aerobiv-btn {
+  background-color: rgb(113, 178, 248);
+  color: black;
+}
+
+.cardio-title,
+.cardio-btn {
+  background-color: var(--main-color);
+  color: black;
+}
+
+.resistance-title,
+.resistance-btn {
+  background-color: rgb(212, 113, 248);
+  color: black;
+}
+
+.history-name {
+  font-weight: bold;
+  margin: 0 auto;
+  color: black;
+}
+
+.history-index {
+  margin: 0 auto;
+  font-size: 13px;
+  color: black;
+}
+
+.show-btn {
+  margin: 20px auto;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+}
+
+.show-btn:hover {
+  font-weight: bold;
+}
+.history-page {
+  height: 100vh;
+  background-image: url('./images/all2.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional - this will make the background image fixed while scrolling */
+  /* You can add additional styles as needed */
+}
+
+
+
+
+
+
+/*.........................7. ErrorPage.css.......................... */
+
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  flex-direction: column; /* Stack elements vertically */
+  text-align: center; /* Center text within the container */
+}
+
+.error-text {
+  font-family: Arial, sans-serif;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.error-image img {
+  max-width: 30%; 
+  height: auto;
+  animation: floatImage 1s ease infinite alternate;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.black-text {
+  color: white;
+}
+
+
+
+/* ..........................8. footer............. */
+.footer{
+  color: white;
+}
